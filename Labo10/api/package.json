@@ -1,0 +1,21 @@
+{
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server.js --exec babel-node",
+    "start": "babel-node src/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.20",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.4",
+    "babel-loader": "^8.0.5",
+    "nodemon": "^1.18.10",
+    "webpack": "^4.29.6"
+  }
+}

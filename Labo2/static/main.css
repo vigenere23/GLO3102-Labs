@@ -1,0 +1,128 @@
+html {
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #1bc42c;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  font-family: 'Roboto', arial, sans-serif;
+}
+
+h1 {
+  color: white;
+  font-family: "Muli", arial, sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  margin: 0;
+}
+
+h2 {
+  color: rgba(255, 255, 255, 0.74);
+  font-family: "Muli", arial, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  margin: 0;
+  margin-top: 1em;
+}
+
+select {
+  display: none;
+}
+
+#search-wrapper {
+  margin: auto;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 200px;
+  text-align: left;
+}
+
+#input-wrapper {
+  position: relative;
+}
+
+#search {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 48px;
+  padding: 0 1em;
+  border: 0;
+  border-radius: 4px;
+  font-family: 'Roboto', arial, sans-serif;
+}
+
+#reset-search {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 48px;
+  padding: 0 0.25em;
+  color: rgba(0, 0, 0, 0.54);
+  background-color: white;
+  border-radius: 4px;
+}
+
+#reset-search:hover {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+#results-wrapper {
+  position: relative;
+}
+
+#results {
+  width: 100%;
+  max-height: calc(5 * 36px);
+  display: block;
+  border-radius: 0 0 4px 4px;
+  padding: 8px 0;
+  margin: 0;
+  overflow: auto;
+  background-color: white;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: -4px;
+}
+
+.result {
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  margin: 0;
+  padding: 0 1em;
+  font-size: 16px;
+  line-height: 36px;
+  color: rgba(0, 0, 0, 0.84);
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.result:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease-in-out;
+}
+
+
+@media screen and (max-width: 640px) {
+  h1 {
+    font-size: 42px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}
