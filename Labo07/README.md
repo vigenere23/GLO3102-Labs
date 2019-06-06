@@ -11,5 +11,4 @@ npm start
 ```
 
 ## User Id
-
 Créer un user selon les instructions du lab4/lab5 et mettre à jour le `userId` dans le fichier src/api.js à la ligne 4.

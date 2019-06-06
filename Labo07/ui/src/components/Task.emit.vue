@@ -12,7 +12,7 @@ export default {
   props: ['deleteTask', 'task'],
 
   methods: {
-    updateTask() {
+    updateTask () {
       const {id, name} = this.task
       api.updateTask(id, name)
     }

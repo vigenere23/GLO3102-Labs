@@ -8,7 +8,7 @@
       v-for="task of tasks"
       v-bind:key="task.id"
       v-bind:task="task"
-      v-bind:deleteTask="deleteTask" />
+      @deleteTask="deleteTask" />
   </div>
 </template>
 
@@ -28,20 +28,20 @@ export default {
   }),
 
   methods: {
-    async createTask () {
+    async createTask() {
       const newTask = await api.createTask(this.name)
       this.name = ''
       this.tasks.push(newTask)
     },
 
-    async deleteTask (id) {
+    deleteTask(id) {
       await api.deleteTask(id)
-      let index = this.tasks.findIndex((task) => task.id == id)
+      let index = this.tasks.findIndex((task) => task.id === id)
       this.tasks.splice(index, 1)
     }
   },
 
-  async created () {
+  async created() {
     this.tasks = await api.getTasks()
   }
 }

@@ -28,20 +28,20 @@ export default {
   }),
 
   methods: {
-    async createTask () {
+    async createTask() {
       const newTask = await api.createTask(this.name)
       this.name = ''
       this.tasks.push(newTask)
     },
 
-    async deleteTask (id) {
+    async deleteTask(id) {
       await api.deleteTask(id)
-      let index = this.tasks.findIndex((task) => task.id == id)
+      let index = this.tasks.findIndex((task) => task.id === id)
       this.tasks.splice(index, 1)
     }
   },
 
-  async created () {
+  async created() {
     this.tasks = await api.getTasks()
   }
 }

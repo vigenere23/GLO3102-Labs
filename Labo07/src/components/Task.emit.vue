@@ -1,7 +1,7 @@
 <template>
   <div>
     <textarea v-model="task.name" v-on:blur="updateTask"></textarea>
-    <button v-on:click="deleteTask(task.id)">Delete</button>
+    <button v-on:click="$emit('deleteTask', task.id)">Delete</button>
   </div>
 </template>
 
@@ -12,8 +12,8 @@ export default {
   props: ['deleteTask', 'task'],
 
   methods: {
-    updateTask () {
-      const { id, name } = this.task
+    updateTask() {
+      const {id, name} = this.task
       api.updateTask(id, name)
     }
   }
